@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@atcute/car':
+        specifier: ^2.0.1
+        version: 2.0.1
+      '@atcute/client':
+        specifier: ^2.0.6
+        version: 2.0.6
     devDependencies:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^5.0.3
@@ -32,6 +39,27 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@atcute/car@2.0.1':
+    resolution: {integrity: sha512-Z1YLniYwChJaHUWJH+99Ru6tNGI3xBngAdlM8qe3xij/wTUaIg14QgXLdWqk6smWTV+bR5IJ+Iiylt2zIJ+XXQ==}
+
+  '@atcute/cbor@2.1.1':
+    resolution: {integrity: sha512-F4sHzsA5DNqMeCxvZKxbvDRIRKBTJom9IEQQutGMMFpvO0TZyIieEKgSL/7Us18TXPWKUXZM38KyCWIlPTLxeg==}
+
+  '@atcute/cid@2.1.0':
+    resolution: {integrity: sha512-Twsf5OKGk6QEqU1Z74feo1eRmnznYFzdCxtCISCutedCL2I2eGzD1F7JZRA+heTp5kgV5Bwvxvjn7VkGQhq3Sg==}
+
+  '@atcute/client@2.0.6':
+    resolution: {integrity: sha512-mhdqEicGUx0s5HTFOLpz91rcLS9j/g63de0nmAqv7blhU3j+xBf4le54qr2YIXNfnReZI7EwLYLX/YIBez4LGA==}
+
+  '@atcute/multibase@1.1.2':
+    resolution: {integrity: sha512-KFX+c7a/u2jSNcRw0rLaUHG/XEKf1A1c8XF5soHnsb1JMCShihf/anfZ1kJ4no/IlIp9HEHV3PQRQO2sWL6ASQ==}
+
+  '@atcute/uint8array@1.0.1':
+    resolution: {integrity: sha512-AAnlFKyfDRgb9GNZJbhQ6OuMhbmNPirQyapb8KnmcEhxQZ3+tt+4NcwqekEegY4MpNqSTYeeTdyxq0wGZv1JHg==}
+
+  '@atcute/varint@1.0.2':
+    resolution: {integrity: sha512-0O31hePzzr4O3NGWHUKKOyta6CGSL+AtN8iir8grGxu9jXyI7DBARlw6PbgKA6uTAvsXdpmRmF8MX+p0TsLnNg==}
 
   '@esbuild/aix-ppc64@0.24.2':
     resolution: {integrity: sha512-thpVCb/rhxE/BnMLQ7GReQLLN8q9qbHmI55F4489/ByVg2aQaQ6kbcLb6FHkocZzQhxc4gx0sCk0tJkKBFzDhA==}
@@ -503,6 +531,34 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
+
+  '@atcute/car@2.0.1':
+    dependencies:
+      '@atcute/cbor': 2.1.1
+      '@atcute/cid': 2.1.0
+      '@atcute/varint': 1.0.2
+
+  '@atcute/cbor@2.1.1':
+    dependencies:
+      '@atcute/cid': 2.1.0
+      '@atcute/multibase': 1.1.2
+      '@atcute/uint8array': 1.0.1
+
+  '@atcute/cid@2.1.0':
+    dependencies:
+      '@atcute/multibase': 1.1.2
+      '@atcute/uint8array': 1.0.1
+      '@atcute/varint': 1.0.2
+
+  '@atcute/client@2.0.6': {}
+
+  '@atcute/multibase@1.1.2':
+    dependencies:
+      '@atcute/uint8array': 1.0.1
+
+  '@atcute/uint8array@1.0.1': {}
+
+  '@atcute/varint@1.0.2': {}
 
   '@esbuild/aix-ppc64@0.24.2':
     optional: true
